@@ -1,0 +1,17 @@
+People Update Assignment
+In today's assignment, I want you to add some extra functionality to our Helloworld contract.
+I want you to use the original contract that I use in the videos, not the modified one you created
+in the assignment yesterday.
+
+Before you do this assignment, you should already have added an event to your createPerson function,
+as I did in the Event video.
+
+Create an event that is called personUpdated. This will be called whenever someone updates their
+information in the mapping. It should contain both the new information and the old information.
+The createPerson function now works for both creating and for updating a persons information. In both
+cases, the function will emit a personCreated event. I want you to modify this function so that if the
+msg.sender updates their information, we should emit a personUpdated event instead.
+This means that if there already is information in the mapping for the msg.sender, this is now a call
+to update the person's information and we should therefore emit the personUpdated event.
+
+Go to Google Classroom and read how to submit your code.
