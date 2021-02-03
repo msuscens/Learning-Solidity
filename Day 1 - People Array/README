@@ -28,3 +28,8 @@ function test() public returns (uint[] memory ){
 }  
 
 Submit your code in Google Classroom.
+
+MY NOTES ON QUESTION ABOVE:
+The syntax above for the testArray is incorrect (it doesn't compile), rather it should be:
+        uint[] memory testArray = new uint[](size); 
+In anycase I haven't use this structure for my solution.
