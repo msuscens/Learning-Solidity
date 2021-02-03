@@ -1,0 +1,33 @@
+Assignment:
+
+There is an error inside the contract, the balance is not updating as it should.
+
+Your assignment is to find what's causing the error and fix the issue.  
+
+Turn in this assignment as a link to your code in GitHub.
+
+pragma solidity 0.5.1;
+contract MemoryAndStorage {
+
+    mapping(uint => User) users;
+
+    struct User{
+        uint id;
+        uint balance;
+    }
+
+    function addUser(uint id, uint balance) public {
+        users[id] = User(id, balance);
+    }
+
+    function updateBalance(uint id, uint balance) public {
+         User memory user = users[id];
+         user.balance = balance;
+    }
+
+    function getBalance(uint id) view public returns (uint) {
+        return users[id].balance;
+    }
+
+}
+

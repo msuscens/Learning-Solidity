@@ -1,0 +1,35 @@
+People Array Assignment
+Your assignment for today is to make a copy of the Helloworld contract and make a few changes. Make sure to keep your original People contract as well, since we will continue to work on that tomorrow.
+
+Instead of having a mapping where we store people, create a new array where we can store the people. 
+When someone creates a new person, add the Person object to the people array instead of the mapping.
+Create a public get function where we can input an index and retrieve the Person object with that index in the array.
+Modify the Person struct and  add an address property Creator. Make sure to edit the createPerson function so that it sets this property to the msg.sender.
+Bonus Assignments
+
+Create a new mapping (address to uint) which stores the number of people created by a specific address.
+Modify the createPerson function to set/update this mapping for every new person created.
+Bonus Assignment #2 [Difficult]
+
+(If you find this assignment too difficult, don't worry, we will go through all of this later in the course)
+
+Create a function that returns an array of all the ID's that the msg.sender has created.
+In order to solve this assignment, you need to know how to define and use "local" arrays, also called "memory arrays" (arrays that are defined in the function scope and not in the global contract scope).
+
+You need to do this in order for every function call to be able to start with an empty array, fill the array with all the ID's and then return the array. This array should not be saved as a state variable. Otherwise, the next person calling the function, looking for all people they created, will get an array that was already filled with the previous callers people. 
+
+Here is how you define a "memory" array, that will only store data temporarily during a function call. We will talk a lot more about this in our Memory vs Storage lecture later on.
+
+function test() public returns (uint[] memory ){
+    .......
+    uint[] memory testArray = new uint[size]; // where size can be a number or variable
+    .......
+
+}  
+
+Submit your code in Google Classroom.
+
+MY NOTES ON QUESTION ABOVE:
+The syntax above for the testArray is incorrect (it doesn't compile), rather it should be:
+        uint[] memory testArray = new uint[](size); 
+In anycase I haven't use this structure for my solution.
