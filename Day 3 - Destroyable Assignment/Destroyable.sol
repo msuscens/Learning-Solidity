@@ -1,20 +1,9 @@
 pragma solidity 0.5.12;
+import "./Ownable.sol";
 
-contract Destroyable {
-    
-    address private owner;
-
-    modifier onlyOwner() {
-        require(msg.sender == owner);
-        _; //Continue execution
-    }
-    
-    constructor() public {
-        owner = msg.sender;
-    } 
+contract Destroyable is Ownable {
     
     function deleteContact() public onlyOwner {
-        //require(msg.sender == owner);
         selfdestruct(msg.sender);
     }
 }
