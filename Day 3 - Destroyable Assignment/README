@@ -1,4 +1,4 @@
-Destroyable Assignement
+Destroyable Assignment
 
 - Study how we can destroy contracts.
 - Build a new contract, must be inherited by HelloWorld contract.
