@@ -1,0 +1,9 @@
+Destroyable Assignement
+
+- Study how we can destroy contracts.
+- Build a new contract, must be inherited by HelloWorld contract.
+- Should allow to destroy the HelloWorld contract ONLY by the owner.
+
+Read more about how to destroy contracts: https://articles.caster.io/blockchain/self-destructing-smart-contracts-in-ethereum/
+
+Submit a link to your code in Google Classroom.
