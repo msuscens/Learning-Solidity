@@ -1,3 +1,4 @@
+pragma solidity 0.5.12;
 import "./Ownable.sol";
 
 contract ERC20 is Ownable{
@@ -39,6 +40,8 @@ contract ERC20 is Ownable{
 
     function mint(address account, uint256 amount) public onlyOwner {
         // create new tokens and put them into specified account
+        require(account != address(0), "Abandoned mint to zero address!");
+        
         uint256 originalBalance = _balances[account];
         uint256 originalTotalSupply = _totalSupply;
         
@@ -51,12 +54,11 @@ contract ERC20 is Ownable{
     }
 
     function transfer(address recipient, uint256 amount) public returns (bool) {
-        require(_balances[msg.sender] >= amount); // sufficient funds
+        require(recipient != address(0), "Won't transfer to zero address!");
+        require(_balances[msg.sender] >= amount, "Balance insufficient for transfer amount!");
+        
         uint256 sendersOriginalBalance = _balances[msg.sender];
         uint256 recipientsOriginalBalance = _balances[recipient];
-        
-        address payable receiver = address((uint160(recipient)));
-        receiver.transfer(amount);
 
         _balances[msg.sender] -= amount;
         _balances[recipient] += amount;
@@ -64,5 +66,7 @@ contract ERC20 is Ownable{
         //check invariant:  total balances == total orignial balances
         assert( (_balances[msg.sender] + _balances[msg.sender]) ==
                 (sendersOriginalBalance + recipientsOriginalBalance));
+                
+        return true;
     }
 }
