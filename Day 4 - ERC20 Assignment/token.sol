@@ -64,7 +64,7 @@ contract ERC20 is Ownable{
         _balances[recipient] += amount;
         
         //check invariant:  total balances == total orignial balances
-        assert( (_balances[msg.sender] + _balances[msg.sender]) ==
+        assert( (_balances[msg.sender] + _balances[recipient]) ==
                 (sendersOriginalBalance + recipientsOriginalBalance));
                 
         return true;
