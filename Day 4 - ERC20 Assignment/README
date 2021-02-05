@@ -1,0 +1,27 @@
+ERC20 Assignment
+
+Write a basic ERC20 with the following functionalities:
+
+function name() public view returns (string memory) {
+}
+
+function symbol() public view returns (string memory) {
+}
+
+function decimals() public view returns (uint8) {
+}
+
+function totalSupply() public view returns (uint256) {
+}
+function balanceOf(address account) public view onlyOwner returns (uint256) {
+}
+
+function mint(address account, uint256 amount) public onlyOwner{
+}
+
+function transfer(address recipient, uint256 amount) public returns (bool) {
+
+}
+
+
+Turn in this assignment as a link to your code in GitHub.
