@@ -1,0 +1,145 @@
+
+#face{
+    background-color: rgb(255, 224, 122);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.eyes{
+    position: relative;
+    top: 30px;
+    display: flex;
+}
+.eye{
+    background-color: #04a71f;
+    border-radius: 50%;
+    width: 50px;
+    height: 40px;
+    margin: 25px;
+    position: relative;
+}
+
+.pupil{
+    background-color: black;
+    width: 30%;
+    height: 80%;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    left: 35%;
+}
+
+.ears{
+    position: relative;
+}
+.ear{
+    border-radius: 90% 0% 90% 0%;
+    background-color: rgb(255, 224, 122);
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: -1;
+}
+
+.left_ear{
+    left: 100px;
+    transform: rotate(13deg); 
+}
+
+.right_ear{
+    transform: scale(1,-1) rotate(0deg);
+}
+
+.inner_ear{
+    border-radius: 90% 0% 90% 0%;
+    background-color: rgb(207, 249, 212);
+    height: 80px;
+    width: 80px;
+    position: absolute;
+}
+
+.left_inner_ear{
+    left: 10%;
+    top: 10%;
+}
+
+.right_inner_ear{
+    left: 10%;
+    top: 10%;
+}
+
+.nose{
+    position: relative;
+}
+.nose_bridge{
+    background-color: #eca130;
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    transform: rotate(65deg);
+}
+.left_nose_bridge{
+    left: 105px;
+    top: 30px;
+}
+.right_nose_bridge{
+    transform: rotate(110deg);
+    left: 65px;
+    top: 30px;
+}
+.nose_tip{
+    border-top: 25px solid #eca130;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 10px;
+    position: absolute;
+    border-radius: 40%;
+
+    left: 35%;
+    top: 40px;
+}
+
+.mouth{
+    position: relative;
+}
+.philtrum{
+    position: absolute;
+    background-color: #eca130;
+    height: 15px;
+    width: 4px;
+    left: 49%;
+    top: 65px;
+}
+.lips{
+    background-color: #eca130;
+    height: 5px;
+    width: 40px;
+    position: absolute;
+    transform: rotate(15deg);
+}
+.left_lip{
+    left: 100px;
+    top: 85px;
+}
+.right_lip{
+    transform: rotate(160deg);
+    left: 65px;
+    top: 85px;
+}
+
+.wiskers{
+    position: relative;
+    background-color: #e2dddd;
+    height: 1px;
+    width: 100px;
+}
+.left_wisker{
+    left: 125px;
+    top: 70px;
+}
+.right_wisker{
+    left: -25px;
+    top: 70px;
+}
